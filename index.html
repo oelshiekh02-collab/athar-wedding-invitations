@@ -3,1120 +3,985 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="أثر - منصة الدعوات الرقمية الفاخرة | Athar Luxury Digital Wedding Invitations" />
-    <title>أثر | دعوات زفاف رقمية فاخرة</title>
+    <meta
+      name="description"
+      content="أثر - دعوة زفاف رقمية فاخرة | Athar Luxury Digital Wedding Invitation"
+    />
+    <title>أثر | Luxury Wedding Invitation</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwUEQpQ1Q+R+Q2O5A4lL7VvD9t7dU6eY3bJqP3w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-    <!-- Google Fonts - Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Droid+Arabic+Kufi:wght@400;700&family=Playfair+Display:wght@400;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:wght@500;600;700;900&display=swap"
       rel="stylesheet"
     />
 
     <style>
       :root {
-        --primary-dark: #0b0f19;
-        --secondary-dark: #1a1f2e;
-        --tertiary-dark: #252d3d;
-        --gold-light: #ffd89b;
-        --gold-main: #d4af37;
-        --gold-dark: #b8860b;
-        --gold-accent: #f4d03f;
-        --platinum: #e8e8e8;
+        --bg: #070b12;
+        --bg-2: #0d1320;
+        --panel: rgba(15, 19, 29, 0.88);
+        --panel-2: rgba(23, 29, 38, 0.95);
+        --gold-1: #fdf2cf;
+        --gold-2: #f4d88d;
+        --gold-3: #d8ae52;
+        --gold-4: #b88422;
+        --gold-5: #8c6218;
+        --text: #f2efe8;
+        --muted: #d1c9ba;
+        --soft: rgba(255, 255, 255, 0.08);
+        --shadow: rgba(12, 9, 6, 0.58);
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
 
       body {
-        background: linear-gradient(135deg, var(--primary-dark) 0%, #0f1420 25%, #131b2e 50%, #0d1117 100%);
-        background-attachment: fixed;
-        color: #f0e8d8;
-        font-family: 'Cairo', 'Droid Arabic Kufi', sans-serif;
+        margin: 0;
+        background:
+          radial-gradient(circle at top right, rgba(216, 174, 82, 0.12), transparent 28%),
+          radial-gradient(circle at bottom left, rgba(184, 132, 34, 0.1), transparent 32%),
+          linear-gradient(140deg, #04070d 0%, #0a0f17 35%, #121b2b 100%);
+        color: var(--text);
+        font-family: 'Cairo', sans-serif;
         overflow-x: hidden;
-        position: relative;
       }
 
-      /* Animated Background Gradient */
-      body::before {
-        content: '';
+      body::before,
+      body::after {
+        content: "";
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-          radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
-          radial-gradient(circle at 40% 20%, rgba(100, 70, 20, 0.04) 0%, transparent 40%);
+        inset: 0;
         pointer-events: none;
         z-index: 0;
       }
 
-      /* Main Content Wrapper */
-      main {
+      body::before {
+        background: linear-gradient(transparent, rgba(255,255,255,0.01));
+      }
+
+      body::after {
+        background-image:
+          radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+          radial-gradient(rgba(212,174,82,0.08) 1px, transparent 1px);
+        background-position: 0 0, 18px 18px;
+        background-size: 30px 30px;
+        opacity: 0.15;
+      }
+
+      .font-amiri { font-family: 'Amiri', serif; }
+      .font-playfair { font-family: 'Playfair Display', serif; }
+      .font-cairo { font-family: 'Cairo', sans-serif; }
+
+      .gold-text {
+        background: linear-gradient(180deg, #fff5d4 0%, #f7df9e 22%, #d9af52 52%, #b6821e 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .gold-border {
+        border: 1px solid rgba(216, 174, 82, 0.42);
+      }
+
+      .glass {
+        background: linear-gradient(135deg, rgba(15,19,29,0.78), rgba(18, 22, 30, 0.86));
+        border: 1px solid rgba(216, 174, 82, 0.18);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .luxury-card {
+        background: linear-gradient(180deg, rgba(22, 27, 38, 0.78), rgba(10, 12, 17, 0.92));
+        border: 1px solid rgba(216, 174, 82, 0.24);
+        box-shadow: 0 22px 60px rgba(0,0,0,0.42);
+      }
+
+      .hero-shell {
         position: relative;
         z-index: 1;
       }
 
-      /* Typography */
-      .font-amiri {
-        font-family: 'Amiri', serif;
-      }
-
-      .font-cairo {
-        font-family: 'Cairo', sans-serif;
-      }
-
-      .font-kufi {
-        font-family: 'Droid Arabic Kufi', sans-serif;
-      }
-
-      .font-playfair {
-        font-family: 'Playfair Display', serif;
-      }
-
-      /* Gold Text Gradient */
-      .gold-gradient {
-        background: linear-gradient(180deg, #ffd89b 0%, #f4d03f 25%, #d4af37 50%, #b8860b 75%, #8b6914 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .gold-gradient-reverse {
-        background: linear-gradient(180deg, #8b6914 0%, #b8860b 25%, #d4af37 50%, #f4d03f 75%, #ffd89b 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      /* Glowing Effects */
-      .glow-gold {
-        text-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
-      }
-
-      .glow-border {
-        border: 2px solid rgba(212, 175, 55, 0.4);
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1);
-      }
-
-      .glow-box {
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.25), 0 20px 60px rgba(0, 0, 0, 0.5);
-      }
-
-      /* Luxury Panel */
-      .luxury-panel {
-        background: linear-gradient(135deg, rgba(26, 31, 46, 0.9) 0%, rgba(37, 45, 61, 0.8) 100%);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        border-radius: 20px;
-      }
-
-      /* Logo & Branding */
-      .logo-icon {
-        width: 70px;
-        height: 70px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(100, 70, 20, 0.15) 100%);
-        border: 2px solid rgba(212, 175, 55, 0.5);
+      .main-logo {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
+        border: 1px solid rgba(216, 174, 82, 0.48);
+        background: radial-gradient(circle at 30% 30%, rgba(250, 222, 156, 0.26), rgba(92, 64, 18, 0.14));
+        box-shadow: 0 0 30px rgba(216, 174, 82, 0.18);
+        animation: bob 3.2s ease-in-out infinite;
+      }
+
+      @keyframes bob {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+
+      .main-logo::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 174, 82, 0.2);
+        animation: spin 9s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .top-social {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(13, 18, 24, 0.9);
+        border: 1px solid rgba(216, 174, 82, 0.38);
+        color: var(--gold-2);
+        box-shadow: 0 0 25px rgba(216, 174, 82, 0.12);
+        transition: 0.25s ease;
+      }
+
+      .top-social:hover {
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 0 30px rgba(216, 174, 82, 0.18);
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.9rem, 5vw, 6rem);
+        line-height: 0.96;
+        letter-spacing: 0.02em;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 174, 82, 0.35);
+        background: rgba(216, 174, 82, 0.06);
+        color: var(--gold-1);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .pill .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #f4d88d, #d8ae52);
+        box-shadow: 0 0 18px rgba(216, 174, 82, 0.7);
+      }
+
+      .cta-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 54px;
+        border: 1px solid rgba(216, 174, 82, 0.45);
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(212, 164, 66, 0.18), rgba(255,255,255,0.02));
+        color: var(--gold-1);
+        padding: 0 28px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        transition: all 0.25s ease;
+        overflow: hidden;
+      }
+
+      .cta-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.08), transparent 80%);
+        transform: translateX(-130%);
+        transition: 0.7s ease;
+      }
+
+      .cta-btn:hover::before { transform: translateX(130%); }
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(216, 174, 82, 0.15);
+      }
+
+      .secondary-btn {
+        background: rgba(12, 16, 22, 0.72);
+        color: #f4efe8;
+        border: 1px solid rgba(255,255,255,0.12);
+      }
+
+      .stat-box {
+        border-radius: 18px;
+        padding: 18px 16px;
+        background: rgba(11, 15, 21, 0.45);
+        border: 1px solid rgba(216, 174, 82, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      }
+
+      .stat-box .value {
+        font-family: 'Amiri', serif;
+        font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+        color: var(--gold-2);
+      }
+
+      .envelope-stage {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 560px;
+      }
+
+      .envelope-wrap {
         position: relative;
-        font-size: 32px;
-        font-weight: 700;
-        color: #d4af37;
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
-        animation: logoFloat 3s ease-in-out infinite;
-      }
-
-      @keyframes logoFloat {
-        0%, 100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-8px);
-        }
-      }
-
-      .logo-icon::before {
-        content: '';
-        position: absolute;
-        inset: -3px;
-        border-radius: 50%;
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        animation: rotateBorder 8s linear infinite;
-      }
-
-      @keyframes rotateBorder {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Envelope Animation */
-      .envelope-container {
-        perspective: 1500px;
+        width: min(90vw, 620px);
+        perspective: 1400px;
         cursor: pointer;
       }
 
       .envelope {
         position: relative;
         width: 100%;
-        max-width: 600px;
-        height: 400px;
-        margin: 0 auto;
+        height: 440px;
         transform-style: preserve-3d;
-        transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       .envelope.opened {
-        transform: rotateX(60deg) scale(0.95);
+        transform: rotateX(12deg) translateY(6px);
       }
 
       .envelope-back {
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(180, 140, 80, 0.6) 0%, rgba(120, 90, 50, 0.5) 100%);
-        border: 2px solid rgba(212, 175, 55, 0.5);
-        border-radius: 15px;
-        transform: translateZ(0);
+        border-radius: 24px;
+        background: linear-gradient(160deg, rgba(34, 34, 34, 0.98), rgba(14, 17, 22, 0.98));
+        border: 1px solid rgba(216, 174, 82, 0.42);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.52);
+      }
+
+      .envelope-back::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(216,174,82,0.12), transparent 34%, transparent 68%, rgba(216,174,82,0.07));
+      }
+
+      .envelope-top {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 58%;
+        background: linear-gradient(180deg, rgba(35,28,21,0.98), rgba(16, 15, 14, 0.98));
+        clip-path: polygon(0 0, 100% 0, 50% 60%);
+        border-radius: 24px 24px 0 0;
+        border: 1px solid rgba(216, 174, 82, 0.3);
+        transform-origin: top center;
+        transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
+        z-index: 3;
+      }
+
+      .envelope.opened .envelope-top {
+        transform: rotateX(180deg);
+        opacity: 0;
       }
 
       .envelope-front {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(35, 30, 25, 0.95) 0%, rgba(20, 18, 16, 0.98) 100%);
-        border: 2px solid rgba(212, 175, 55, 0.4);
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 40px;
-        transform: translateZ(10px);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-        overflow: hidden;
+        border-radius: 24px;
+        background: linear-gradient(160deg, rgba(24, 20, 16, 0.96), rgba(12, 14, 18, 0.98));
+        border: 1px solid rgba(216, 174, 82, 0.3);
+        z-index: 2;
       }
 
-      .envelope-front::before {
-        content: '';
+      .envelope-front::before,
+      .envelope-front::after {
+        content: "";
         position: absolute;
         inset: 0;
-        background: repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 10px,
-          rgba(212, 175, 55, 0.05) 10px,
-          rgba(212, 175, 55, 0.05) 20px
-        );
-        pointer-events: none;
+        border-radius: 24px;
+        background: linear-gradient(45deg, transparent 49.6%, rgba(216,174,82,0.1) 49.7%, rgba(216,174,82,0.1) 50.3%, transparent 50.4%);
+      }
+
+      .envelope-front::after {
+        background: linear-gradient(-45deg, transparent 49.6%, rgba(216,174,82,0.08) 49.7%, rgba(216,174,82,0.08) 50.3%, transparent 50.4%);
       }
 
       .wax-seal {
-        width: 100px;
-        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 110px;
+        height: 110px;
+        transform: translate(-50%, -50%);
         border-radius: 50%;
-        background: radial-gradient(circle at 30% 30%, #ffd89b 0%, #d4af37 40%, #8b6914 100%);
-        box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4), inset -5px -5px 15px rgba(0, 0, 0, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 48px;
+        background: radial-gradient(circle at 38% 30%, #fff4cc 0%, #f2ce70 17%, #d6a442 40%, #8d6020 100%);
+        border: 1px solid rgba(120, 88, 33, 0.5);
+        box-shadow: 0 18px 40px rgba(216,174,82,0.26), inset -8px -8px 24px rgba(60,38,6,0.12);
+        display: grid;
+        place-items: center;
+        font-family: 'Amiri', serif;
+        color: rgba(40, 22, 8, 0.8);
+        font-size: 2.7rem;
         font-weight: 700;
-        color: rgba(40, 20, 5, 0.9);
-        position: relative;
-        animation: sealPulse 2s ease-in-out infinite;
+        z-index: 4;
+        animation: pulse 3.3s ease-in-out infinite;
       }
 
-      @keyframes sealPulse {
-        0%, 100% {
-          transform: scale(1);
-          box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4), inset -5px -5px 15px rgba(0, 0, 0, 0.3);
-        }
-        50% {
-          transform: scale(1.08);
-          box-shadow: 0 20px 50px rgba(212, 175, 55, 0.5), inset -5px -5px 15px rgba(0, 0, 0, 0.2);
-        }
+      @keyframes pulse {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); }
+        50% { transform: translate(-50%, -50%) scale(1.04); }
       }
 
       .wax-seal::before {
-        content: '';
+        content: "";
         position: absolute;
-        inset: -8px;
+        inset: -10px;
+        border: 1px dashed rgba(216,174,82,0.5);
         border-radius: 50%;
-        border: 2px dashed rgba(212, 175, 55, 0.3);
-        animation: sealSpin 8s linear infinite;
+        animation: spin 9s linear infinite;
       }
 
-      @keyframes sealSpin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+      .card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: min(86vw, 560px);
+        min-height: 300px;
+        transform: translate(-50%, -42%) scale(0.85);
+        background: linear-gradient(180deg, rgba(250,247,242,0.98), rgba(236,230,219,0.97));
+        border: 1px solid rgba(111, 90, 43, 0.3);
+        border-radius: 22px;
+        box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+        padding: 26px 22px 18px;
+        color: #2f261e;
+        opacity: 0;
+        z-index: 1;
+        transition: all 1.1s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
-      .envelope-text {
-        text-align: center;
+      .envelope.opened .card {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: 5;
+      }
+
+      .card::before,
+      .card::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(216,174,82,0.26);
+      }
+
+      .card::before {
+        width: 62px;
+        height: 62px;
+        top: 20px;
+        left: 20px;
+      }
+
+      .card::after {
+        width: 62px;
+        height: 62px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .inner-card {
         position: relative;
         z-index: 2;
       }
 
-      .envelope-text-small {
-        font-size: 14px;
-        letter-spacing: 3px;
-        color: rgba(212, 175, 55, 0.8);
+      .card-tag {
+        font-size: 10px;
+        letter-spacing: 0.42em;
+        color: rgba(87, 65, 24, 0.72);
         text-transform: uppercase;
+      }
+
+      .card-title {
+        margin-top: 10px;
+        font-size: clamp(2.3rem, 4vw, 4rem);
+        line-height: 1;
+        font-family: 'Amiri', serif;
+        font-weight: 700;
+      }
+
+      .card-sub {
+        margin-top: 14px;
+        font-size: 12px;
+        letter-spacing: 0.28em;
+        color: rgba(58, 45, 30, 0.8);
+        text-transform: uppercase;
+      }
+
+      .card-seal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        margin: 22px 0 18px;
+      }
+
+      .card-seal .line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(160,126,53,0.6), transparent);
+      }
+
+      .card-seal .circle {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at 30% 30%, #f5d57d, #d5a64d 40%, #89621d 100%);
+        border: 1px solid rgba(83, 62, 20, 0.4);
+        color: rgba(46, 29, 11, 0.8);
+        font-size: 1.9rem;
+        font-weight: 700;
+        font-family: 'Amiri', serif;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 20px;
+        padding: 18px 0;
+        border-top: 1px solid rgba(137, 98, 29, 0.2);
+        border-bottom: 1px solid rgba(137, 98, 29, 0.2);
+      }
+
+      .detail { text-align: center; }
+      .detail .label {
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        color: rgba(82, 66, 45, 0.72);
+        text-transform: uppercase;
+      }
+      .detail .value {
+        margin-top: 8px;
+        font-family: 'Amiri', serif;
+        font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+      }
+
+      .quote {
+        margin-top: 18px;
+        font-size: 1.02rem;
+        font-family: 'Amiri', serif;
+        font-style: italic;
+        color: rgba(66,53,39,0.78);
+      }
+
+      .preview-wrap {
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+      }
+
+      .feature-box {
+        border-radius: 22px;
+        padding: 26px 22px;
+        background: rgba(12, 17, 23, 0.44);
+        border: 1px solid rgba(216,174,82,0.2);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 40px rgba(216,174,82,0.09);
+      }
+
+      .feature-box .icon {
+        font-size: 2.1rem;
+        margin-bottom: 10px;
+        color: var(--gold-2);
+      }
+
+      .floating-badge {
+        position: absolute;
+        top: 22%;
+        right: 8%;
+        z-index: 8;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(12, 16, 22, 0.7);
+        border: 1px solid rgba(216,174,82,0.18);
+        color: var(--gold-1);
+        letter-spacing: 0.05em;
+        transform: rotate(6deg);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      }
+
+      .booking-modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(6, 8, 12, 0.72);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 18px;
+      }
+
+      .booking-modal.active {
+        display: flex;
+      }
+
+      .booking-panel {
+        width: min(94vw, 720px);
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(12,17,22,0.96), rgba(22,27,38,0.94));
+        border: 1px solid rgba(216,174,82,0.2);
+        box-shadow: 0 35px 90px rgba(0,0,0,0.7);
+        position: relative;
+        padding: 34px 28px;
+      }
+
+      .close-btn {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid rgba(216,174,82,0.3);
+        background: rgba(255,255,255,0.02);
+        color: var(--gold-2);
+        font-size: 28px;
+        cursor: pointer;
+      }
+
+      .form-field {
+        margin-top: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--gold-2);
+        font-size: 0.9rem;
         font-weight: 600;
       }
 
-      .envelope-text-main {
-        font-size: 28px;
-        font-weight: 700;
-        color: #ffd89b;
-        letter-spacing: 2px;
-      }
-
-      /* Card Content */
-      .invitation-card {
-        position: relative;
+      input, textarea {
         width: 100%;
-        max-width: 650px;
-        margin: 0 auto;
-        background: linear-gradient(180deg, rgba(248, 242, 232, 0.98) 0%, rgba(234, 225, 211, 0.97) 100%);
-        border: 2px solid rgba(166, 121, 42, 0.4);
-        border-radius: 20px;
-        padding: 60px 40px;
-        text-align: center;
-        color: #2d2416;
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-        animation: cardSlideUp 1s ease-out;
+        border: 1px solid rgba(216,174,82,0.25);
+        border-radius: 14px;
+        background: rgba(10,13,18,0.8);
+        color: #f1ebdf;
+        padding: 15px 14px;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.25s ease;
       }
 
-      @keyframes cardSlideUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
+      input:focus, textarea:focus {
+        border-color: rgba(216,174,82,0.7);
+        box-shadow: 0 0 0 4px rgba(216,174,82,0.08);
+      }
+
+      textarea {
+        min-height: 112px;
+        resize: vertical;
+      }
+
+      .price-box {
+        margin-top: 22px;
+        border-radius: 18px;
+        border: 1px solid rgba(216,174,82,0.28);
+        background: rgba(216,174,82,0.06);
+        padding: 18px 18px;
+      }
+
+      .privacy-note {
+        margin-top: 12px;
+        text-align: center;
+        color: rgba(216,174,82,0.7);
+        font-size: 0.8rem;
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(24px);
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      @keyframes fadeUp {
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
 
-      .invitation-card::before {
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        width: 60px;
-        height: 60px;
-        border: 2px solid rgba(212, 175, 55, 0.3);
-        border-radius: 50%;
-      }
-
-      .invitation-card::after {
-        content: '';
-        position: absolute;
-        bottom: 30px;
-        right: 30px;
-        width: 60px;
-        height: 60px;
-        border: 2px solid rgba(212, 175, 55, 0.3);
-        border-radius: 50%;
-      }
-
-      .card-header {
-        margin-bottom: 30px;
-      }
-
-      .card-decorline {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 20px;
-      }
-
-      .card-decorline-line {
-        flex: 1;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
-      }
-
-      .card-header-small {
-        font-size: 12px;
-        letter-spacing: 3px;
-        color: rgba(212, 175, 55, 0.7);
-        text-transform: uppercase;
-        font-weight: 600;
-        font-family: 'Cairo', sans-serif;
-      }
-
-      .card-title {
-        font-size: 48px;
-        font-weight: 700;
-        color: #1a1410;
-        margin: 15px 0;
-        font-family: 'Amiri', serif;
-        letter-spacing: 1px;
-      }
-
-      .card-subtitle {
-        font-size: 14px;
-        color: rgba(45, 36, 22, 0.7);
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-family: 'Cairo', sans-serif;
-      }
-
-      .card-seal-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        margin: 40px 0;
-        padding: 20px 0;
-      }
-
-      .card-seal-line {
-        flex: 1;
-        max-width: 80px;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
-      }
-
-      .card-seal-icon {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 30% 30%, #f4d03f 0%, #d4af37 40%, #8b6914 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 40px;
-        font-weight: 700;
-        color: rgba(40, 20, 5, 0.85);
-        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-        border: 2px solid rgba(212, 175, 55, 0.2);
-      }
-
-      .card-details {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-        margin: 40px 0;
-        padding: 30px 0;
-        border-top: 1px solid rgba(212, 175, 55, 0.2);
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-      }
-
-      .card-detail-item {
-        text-align: center;
-      }
-
-      .card-detail-label {
-        font-size: 11px;
-        letter-spacing: 2px;
-        color: rgba(212, 175, 55, 0.7);
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-bottom: 8px;
-        font-family: 'Cairo', sans-serif;
-      }
-
-      .card-detail-value {
-        font-size: 24px;
-        font-weight: 600;
-        color: #1a1410;
-        font-family: 'Amiri', serif;
-      }
-
-      .card-quote {
-        margin: 35px 0;
-        font-size: 16px;
-        color: rgba(45, 36, 22, 0.8);
-        line-height: 1.8;
-        font-family: 'Amiri', serif;
-        font-style: italic;
-      }
-
-      .card-footer {
-        margin-top: 30px;
-        font-size: 12px;
-        color: rgba(212, 175, 55, 0.6);
-        letter-spacing: 1px;
-      }
-
-      /* Buttons */
-      .btn-luxury {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 14px 40px;
-        border: 2px solid rgba(212, 175, 55, 0.6);
-        border-radius: 50px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(180, 140, 80, 0.1) 100%);
-        color: #d4af37;
-        font-weight: 600;
-        font-size: 15px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .btn-luxury::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, transparent 50%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .btn-luxury:hover {
-        border-color: #d4af37;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(180, 140, 80, 0.2) 100%);
-        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-        transform: translateY(-2px);
-      }
-
-      .btn-luxury:hover::before {
-        opacity: 1;
-      }
-
-      .btn-social {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid rgba(212, 175, 55, 0.5);
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(100, 70, 20, 0.1) 100%);
-        color: #d4af37;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 22px;
-      }
-
-      .btn-social:hover {
-        border-color: #d4af37;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(100, 70, 20, 0.15) 100%);
-        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-        transform: scale(1.1);
-      }
-
-      /* Modal */
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(8px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        padding: 20px;
-      }
-
-      .modal.active {
-        display: flex;
-        opacity: 1;
-      }
-
-      .modal-content {
-        background: linear-gradient(135deg, rgba(26, 31, 46, 0.95) 0%, rgba(37, 45, 61, 0.92) 100%);
-        border: 2px solid rgba(212, 175, 55, 0.4);
-        border-radius: 20px;
-        padding: 50px 40px;
-        max-width: 600px;
-        width: 100%;
-        max-height: 90vh;
-        overflow-y: auto;
-        animation: modalSlideIn 0.4s ease-out;
-        position: relative;
-      }
-
-      @keyframes modalSlideIn {
-        from {
-          opacity: 0;
-          transform: scale(0.95) translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1) translateY(0);
-        }
-      }
-
-      .modal-close {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid rgba(212, 175, 55, 0.5);
-        background: transparent;
-        color: #d4af37;
-        font-size: 24px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-      }
-
-      .modal-close:hover {
-        background: rgba(212, 175, 55, 0.1);
-        border-color: #d4af37;
-      }
-
-      /* Form */
-      .form-group {
-        margin-bottom: 25px;
-      }
-
-      .form-label {
-        display: block;
-        font-size: 14px;
-        font-weight: 600;
-        color: #d4af37;
-        margin-bottom: 10px;
-        text-align: right;
-      }
-
-      .form-input,
-      .form-textarea {
-        width: 100%;
-        padding: 12px 16px;
-        background: rgba(11, 15, 25, 0.5);
-        border: 2px solid rgba(212, 175, 55, 0.3);
-        border-radius: 10px;
-        color: #f0e8d8;
-        font-family: 'Cairo', sans-serif;
-        font-size: 14px;
-        transition: all 0.3s ease;
-        outline: none;
-      }
-
-      .form-input:focus,
-      .form-textarea:focus {
-        border-color: #d4af37;
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-        background: rgba(11, 15, 25, 0.7);
-      }
-
-      .form-textarea {
-        resize: vertical;
-        min-height: 100px;
-      }
-
-      /* Animations */
-      .fade-in {
-        animation: fadeIn 0.8s ease-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .slide-in-right {
-        animation: slideInRight 0.8s ease-out;
-      }
-
-      @keyframes slideInRight {
-        from {
-          opacity: 0;
-          transform: translateX(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      .slide-in-left {
-        animation: slideInLeft 0.8s ease-out;
-      }
-
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      /* Responsive */
       @media (max-width: 768px) {
-        .card-title {
-          font-size: 36px;
-        }
-
-        .envelope-text-main {
-          font-size: 22px;
-        }
-
-        .card-details {
-          grid-template-columns: 1fr;
-          gap: 15px;
-        }
-
-        .invitation-card {
-          padding: 40px 25px;
-        }
-
-        .modal-content {
-          padding: 35px 25px;
-        }
-      }
-
-      /* Smooth Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: rgba(212, 175, 55, 0.05);
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: rgba(212, 175, 55, 0.3);
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(212, 175, 55, 0.5);
+        .floating-badge { display: none; }
+        .cta-btn { width: 100%; }
+        .details-grid { grid-template-columns: 1fr; }
+        .card { width: min(88vw, 480px); }
+        .booking-panel { padding: 28px 18px; }
       }
     </style>
   </head>
-
   <body>
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 py-6 px-4 md:px-8">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center gap-3 slide-in-left">
-          <div class="logo-icon">ا</div>
-          <div class="hidden sm:block">
-            <h1 class="text-2xl md:text-3xl font-kufi font-bold tracking-widest">
-              <span class="gold-gradient">أثر</span>
-            </h1>
-            <p class="text-xs text-yellow-600/80 tracking-widest font-cairo">Luxury Invitations</p>
+    <header class="relative z-10 px-4 pt-5 md:px-8">
+      <div class="mx-auto flex max-w-7xl items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="main-logo">
+            <span class="gold-text font-amiri text-3xl leading-none">ا</span>
+          </div>
+          <div>
+            <div class="font-amiri text-3xl md:text-4xl gold-text">أثر</div>
+            <div class="text-[10px] tracking-[0.32em] text-stone-300/80">LUXURY INVITATIONS</div>
           </div>
         </div>
 
-        <!-- Social Links & Actions -->
-        <div class="flex items-center gap-4 slide-in-right">
+        <div class="flex items-center gap-3">
           <a
-            href="https://wa.me/201097597133?text=مرحباً%20أرغب%20في%20الاستفسار%20عن%20خدمات%20الدعوات%20الفاخرة"
+            href="https://wa.me/201097597133?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D9%81%D8%A7%D8%AE%D8%B5%D8%A9"
             target="_blank"
-            rel="noopener noreferrer"
-            class="btn-social"
+            rel="noopener"
             aria-label="واتساب"
-            title="تواصل معنا عبر واتساب"
+            class="top-social"
           >
-            <i class="fab fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp"></i>
           </a>
           <a
             href="https://www.instagram.com/atharluxury4?stkn=OHA0NTNlY3o0cGJw"
             target="_blank"
-            rel="noopener noreferrer"
-            class="btn-social"
+            rel="noopener"
             aria-label="إنستغرام"
-            title="تابعنا على إنستغرام"
+            class="top-social"
           >
-            <i class="fab fa-instagram"></i>
+            <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="min-h-screen pt-32 pb-16 px-4 md:px-8">
-      <div class="max-w-7xl mx-auto">
-        <!-- Hero Section -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          <!-- Left Content -->
-          <div class="space-y-8 slide-in-left">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-600/40 bg-yellow-600/5 backdrop-filter backdrop-blur-sm">
-              <span class="w-2 h-2 rounded-full bg-yellow-500/80"></span>
-              <span class="text-sm font-cairo tracking-widest text-yellow-200">دعوة ملكية مميزة</span>
-            </div>
-
-            <!-- Main Title -->
-            <div class="space-y-4">
-              <h2 class="text-5xl md:text-6xl lg:text-7xl font-amiri font-bold leading-tight">
-                <span class="text-white">عيدٌ يزهر</span>
-                <br />
-                <span class="gold-gradient">بحب خالد</span>
-              </h2>
-              <p class="text-lg text-yellow-100/80 leading-relaxed font-cairo max-w-lg">
-                نتشرف بدعوتكم لحضور حفل زفاف ملكي يجمع القلوب بحب وسعادة، حيث تجتمع أغلى اللحظات تحت اسم أثر للدعوات الرقمية الفاخرة.
-              </p>
-            </div>
-
-            <!-- Quick Info Cards -->
-            <div class="grid grid-cols-3 gap-4 py-4">
-              <div class="luxury-panel p-4 text-center rounded-xl">
-                <div class="font-amiri text-3xl gold-gradient font-bold">١٢</div>
-                <div class="text-xs text-yellow-600/80 font-cairo mt-2">أكتوبر</div>
-              </div>
-              <div class="luxury-panel p-4 text-center rounded-xl">
-                <div class="font-amiri text-3xl gold-gradient font-bold">٢٠٢٦</div>
-                <div class="text-xs text-yellow-600/80 font-cairo mt-2">السنة</div>
-              </div>
-              <div class="luxury-panel p-4 text-center rounded-xl">
-                <div class="font-amiri text-3xl gold-gradient font-bold">٧:٣٠</div>
-                <div class="text-xs text-yellow-600/80 font-cairo mt-2">مساءً</div>
-              </div>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 pt-4">
-              <button id="openEnvelopeBtn" class="btn-luxury group">
-                <i class="fas fa-envelope-open-text group-hover:animate-bounce"></i>
-                <span>فتح البطاقة</span>
-              </button>
-              <button id="openFormBtn" class="btn-luxury">
-                <i class="fas fa-pencil-alt"></i>
-                <span>طلب دعوة خاصة</span>
-              </button>
-            </div>
+    <main class="hero-shell relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-8 md:px-8">
+      <section class="grid items-center gap-14 py-6 lg:grid-cols-[1fr_1.1fr]">
+        <div class="space-y-8 fade-up">
+          <div class="pill">
+            <span class="dot"></span>
+            <span>دعوة ملكية فاخرة</span>
           </div>
 
-          <!-- Right - Envelope Animation -->
-          <div class="flex justify-center items-center slide-in-right h-full min-h-[500px]">
-            <div class="envelope-container w-full max-w-md" id="envelopeContainer">
-              <div class="envelope" id="envelope">
-                <!-- Envelope Back -->
-                <div class="envelope-back"></div>
+          <div class="hero-text space-y-4">
+            <h1>
+              <span class="text-white">عيدٌ يزهر</span><br />
+              <span class="gold-text">بحبٍ خالد</span>
+            </h1>
+            <p class="max-w-xl text-base leading-8 text-stone-200/85 md:text-lg">
+              تحت شعار أثر، نقدم لك تجربة دعوة زفاف رقمية راقية تجمع بين الفن الملكي والدفء العائلي، لتُبنى ليلة لا تُنسى في قلب كل ضيفٍ يفتحها.
+            </p>
+          </div>
 
-                <!-- Envelope Front -->
-                <div class="envelope-front">
-                  <div class="wax-seal">ا</div>
-                  <div class="envelope-text">
-                    <div class="envelope-text-small">أثر للدعوات الفاخرة</div>
-                    <div class="envelope-text-main">دعوة خاصة</div>
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <button id="openCardBtn" class="cta-btn" type="button">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <span>فتح البطاقة</span>
+            </button>
+            <button id="bookingBtn" class="cta-btn secondary-btn" type="button">
+              <i class="fa-solid fa-pen-fancy"></i>
+              <span>طلب الحجز</span>
+            </button>
+          </div>
+
+          <div class="grid max-w-xl gap-4 sm:grid-cols-3">
+            <div class="stat-box text-center">
+              <div class="value">12</div>
+              <div class="mt-2 text-[11px] tracking-[0.26em] text-stone-300/80 uppercase">أكتوبر</div>
+            </div>
+            <div class="stat-box text-center">
+              <div class="value">2026</div>
+              <div class="mt-2 text-[11px] tracking-[0.26em] text-stone-300/80 uppercase">السنة</div>
+            </div>
+            <div class="stat-box text-center">
+              <div class="value">7:30</div>
+              <div class="mt-2 text-[11px] tracking-[0.26em] text-stone-300/80 uppercase">مساءً</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="envelope-stage fade-up">
+          <div class="floating-badge">سارة &amp; يوسف</div>
+
+          <div id="envelopeWrap" class="envelope-wrap" aria-label="بطاقة دعوة زفاف" role="button" tabindex="0">
+            <div id="envelope" class="envelope">
+              <div class="envelope-back"></div>
+              <div class="envelope-top"></div>
+              <div class="envelope-front"></div>
+              <div class="wax-seal">ا</div>
+
+              <div class="card">
+                <div class="inner-card">
+                  <div class="card-tag">athar</div>
+                  <div class="card-title">سارة و يوسف</div>
+                  <div class="card-sub">يدعونكم لحضور ليلة زفافهم</div>
+
+                  <div class="card-seal">
+                    <span class="line"></span>
+                    <span class="circle">ا</span>
+                    <span class="line"></span>
                   </div>
+
+                  <div class="details-grid">
+                    <div class="detail">
+                      <div class="label">التاريخ</div>
+                      <div class="value">12 أكتوبر</div>
+                    </div>
+                    <div class="detail">
+                      <div class="label">الساعة</div>
+                      <div class="value">7:30 م</div>
+                    </div>
+                    <div class="detail">
+                      <div class="label">المكان</div>
+                      <div class="value">قصر الياسمين</div>
+                    </div>
+                  </div>
+
+                  <div class="quote">"مع بعضنا نبدأ قصة جديدة، وبحبكم تصير الليلة أجمل."</div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Invitation Card Preview -->
-        <section class="py-16">
-          <h3 class="text-center text-4xl font-amiri font-bold mb-12">
-            <span class="gold-gradient">معاينة البطاقة الفاخرة</span>
-          </h3>
-
-          <div class="invitation-card fade-in">
-            <!-- Card Header -->
-            <div class="card-header">
-              <div class="card-decorline">
-                <div class="card-decorline-line"></div>
-                <div class="card-header-small">أثر</div>
-                <div class="card-decorline-line"></div>
-              </div>
-              <h1 class="card-title">سارة و يوسف</h1>
-              <p class="card-subtitle">يدعونكم لحضور ليلة زفافهم المميزة</p>
-            </div>
-
-            <!-- Decorative Seal -->
-            <div class="card-seal-container">
-              <div class="card-seal-line"></div>
-              <div class="card-seal-icon">ا</div>
-              <div class="card-seal-line"></div>
-            </div>
-
-            <!-- Card Details -->
-            <div class="card-details">
-              <div class="card-detail-item">
-                <div class="card-detail-label">التاريخ</div>
-                <div class="card-detail-value">١٢ أكتوبر</div>
-              </div>
-              <div class="card-detail-item">
-                <div class="card-detail-label">الوقت</div>
-                <div class="card-detail-value">٧:٣٠ م</div>
-              </div>
-              <div class="card-detail-item">
-                <div class="card-detail-label">المكان</div>
-                <div class="card-detail-value">قصر الياسمين</div>
-              </div>
-            </div>
-
-            <!-- Quote -->
-            <div class="card-quote">
-              "مع بعضنا نبدأ قصة جديدة، وبحبكم يتألق هذا اليوم الجميل"
-            </div>
-
-            <!-- Footer -->
-            <div class="card-footer">
-              نتطلع لحضوركم وزينة مجلسكم
-              <br />
-              <span class="text-yellow-600">❖ أثر للدعوات الرقمية الفاخرة ❖</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="py-16 mt-20">
-          <h3 class="text-center text-4xl font-amiri font-bold mb-12">
-            <span class="gold-gradient">تميز خدماتنا</span>
-          </h3>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Feature 1 -->
-            <div class="luxury-panel p-8 rounded-2xl text-center hover:glow-box transition group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition">✨</div>
-              <h4 class="text-xl font-amiri font-bold text-yellow-100 mb-3">تصميم فاخر</h4>
-              <p class="text-sm text-yellow-100/70 font-cairo leading-relaxed">
-                بطاقات دعوة رقمية بتصاميم احترافية وفاخرة تعكس جمال لحظتك الخاصة بكل أناقة.
-              </p>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="luxury-panel p-8 rounded-2xl text-center hover:glow-box transition group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition">🎭</div>
-              <h4 class="text-xl font-amiri font-bold text-yellow-100 mb-3">تأثيرات حية</h4>
-              <p class="text-sm text-yellow-100/70 font-cairo leading-relaxed">
-                بطاقات تفاعلية مع ختم شمعي متحرك وتأثيرات بصرية سينمائية تسحر المعازيم.
-              </p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="luxury-panel p-8 rounded-2xl text-center hover:glow-box transition group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition">💎</div>
-              <h4 class="text-xl font-amiri font-bold text-yellow-100 mb-3">احترافية تامة</h4>
-              <p class="text-sm text-yellow-100/70 font-cairo leading-relaxed">
-                خدمة عملاء متميزة وحجز سهل وسريع مع دعم فني 24/7 لضمان تجربتك الرائعة.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-      <div class="modal-content">
-        <button class="modal-close" id="closeFormBtn">×</button>
-
-        <div class="mb-8">
-          <h2 class="text-4xl font-amiri font-bold mb-2">
-            <span class="gold-gradient">طلب دعوة خاصة</span>
-          </h2>
-          <p class="text-sm text-yellow-600/80 font-cairo tracking-widest">أكمل التفاصيل أدناه</p>
+      <section class="preview-wrap mt-20">
+        <div class="section-title">
+          <h2 class="font-amiri gold-text">معاينة البطاقة الفاخرة</h2>
         </div>
 
-        <form id="bookingForm" class="space-y-6">
-          <!-- Row 1 -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="form-group">
-              <label for="groomName" class="form-label">اسم العريس</label>
-              <input type="text" id="groomName" name="groomName" class="form-input" value="يوسف" required />
+        <div class="mx-auto max-w-5xl luxury-card rounded-[30px] p-5 md:p-8">
+          <div class="rounded-[26px] border border-yellow-500/20 bg-[#f7f0e6] p-6 text-[#241d17] shadow-[0_25px_50px_rgba(0,0,0,0.16)] md:p-12">
+            <div class="text-center">
+              <div class="mb-3 inline-flex items-center gap-3 text-[11px] tracking-[0.38em] text-[#8b6d43] uppercase">
+                <span class="h-px w-10 bg-[#8b6d43]"></span>
+                athar
+                <span class="h-px w-10 bg-[#8b6d43]"></span>
+              </div>
+
+              <h3 class="font-amiri text-[3rem] leading-none md:text-[5rem]">سارة و يوسف</h3>
+              <p class="mt-4 text-[12px] tracking-[0.32em] text-[#7a6750] uppercase">يدعونكم لحضور ليلة زفافهم</p>
             </div>
-            <div class="form-group">
-              <label for="brideName" class="form-label">اسم العروسة</label>
-              <input type="text" id="brideName" name="brideName" class="form-input" value="سارة" required />
+
+            <div class="mt-8 flex items-center justify-center gap-5">
+              <span class="h-px flex-1 max-w-[90px] bg-[#b8924d]"></span>
+              <span class="grid h-[78px] w-[78px] place-items-center rounded-full border border-[#b8924d] bg-[radial-gradient(circle_at_35%_30%,#f6d87f,#d9a74b_45%,#774d17_100%)] text-[2rem] font-amiri text-[#341e0d] shadow-[0_12px_28px_rgba(216,167,75,0.25)]">ا</span>
+              <span class="h-px flex-1 max-w-[90px] bg-[#b8924d]"></span>
+            </div>
+
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="text-center">
+                <div class="text-[10px] tracking-[0.3em] text-[#8b6d43] uppercase">التاريخ</div>
+                <div class="mt-2 font-amiri text-[2rem]">١٢ أكتوبر</div>
+              </div>
+              <div class="text-center">
+                <div class="text-[10px] tracking-[0.3em] text-[#8b6d43] uppercase">الساعة</div>
+                <div class="mt-2 font-amiri text-[2rem]">٧:٣٠ م</div>
+              </div>
+              <div class="text-center">
+                <div class="text-[10px] tracking-[0.3em] text-[#8b6d43] uppercase">المكان</div>
+                <div class="mt-2 font-amiri text-[2rem]">قصر الياسمين</div>
+              </div>
+            </div>
+
+            <div class="mt-8 text-center font-amiri text-[1.55rem] italic leading-[1.8] text-[#4d3321]">
+              "مع بعضنا نبدأ قصة جديدة، وبحبكم تصبح الليلة أجمل." 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-20">
+        <div class="section-title">
+          <h2 class="font-amiri gold-text">لماذا تختار أثر؟</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="feature-box">
+            <div class="icon"><i class="fa-solid fa-crown"></i></div>
+            <h3 class="font-amiri text-[2rem] text-yellow-200">تصميم فاخر</h3>
+            <p class="mt-4 text-sm leading-8 text-stone-300/80">
+              هرستك جمالية أنيقة تجمع بين الفخامة والهدوء، مع لمسة ملكية غنية في كل عنصر.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="icon"><i class="fa-solid fa-wand-sparkles"></i></div>
+            <h3 class="font-amiri text-[2rem] text-yellow-200">تأثيرات حية</h3>
+            <p class="mt-4 text-sm leading-8 text-stone-300/80">
+              بطاقات متحركة، ختم شمعي ثلاثي الأبعاد، وانسيابية بصرية تعطي التجربة طابعاً سينمائياً.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="icon"><i class="fa-solid fa-gem"></i></div>
+            <h3 class="font-amiri text-[2rem] text-yellow-200">تجربة احترافية</h3>
+            <p class="mt-4 text-sm leading-8 text-stone-300/80">
+              كل تفاصيل الصفحة تم هندستها لتناسب الشاشات المختلفة وتضمن مظهرًا أنيقًا على الهاتف والتابلت والسماعات الكبيرة.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="bookingModal" class="booking-modal" aria-modal="true" role="dialog">
+      <div class="booking-panel">
+        <button id="closeModal" class="close-btn" type="button" aria-label="إغلاق النموذج">×</button>
+
+        <div class="pt-8 text-center">
+          <div class="font-amiri gold-text text-[2.5rem]">طلب دعوة خاصة</div>
+          <p class="mt-2 text-sm tracking-[0.2em] text-stone-300/80 uppercase">booking &amp; reservation</p>
+        </div>
+
+        <form id="bookingForm" class="mt-8">
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="form-field">
+              <label for="groomName">اسم العريس</label>
+              <input id="groomName" name="groomName" type="text" value="يوسف" required />
+            </div>
+
+            <div class="form-field">
+              <label for="brideName">اسم العروسة</label>
+              <input id="brideName" name="brideName" type="text" value="سارة" required />
             </div>
           </div>
 
-          <!-- Row 2 -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="form-group">
-              <label for="weddingDate" class="form-label">تاريخ الزفاف</label>
-              <input type="text" id="weddingDate" name="weddingDate" class="form-input" value="12 أكتوبر 2026" required />
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="form-field">
+              <label for="weddingDate">موعد الزفاف</label>
+              <input id="weddingDate" name="weddingDate" type="text" value="12 أكتوبر 2026" required />
             </div>
-            <div class="form-group">
-              <label for="venue" class="form-label">المكان</label>
-              <input type="text" id="venue" name="venue" class="form-input" value="قصر الياسمين - القاهرة" required />
+
+            <div class="form-field">
+              <label for="venue">المكان</label>
+              <input id="venue" name="venue" type="text" value="قصر الياسمين - القاهرة" required />
             </div>
           </div>
 
-          <!-- Row 3 -->
-          <div class="form-group">
-            <label for="welcomeMessage" class="form-label">جملة الترحيب</label>
-            <textarea
-              id="welcomeMessage"
-              name="welcomeMessage"
-              class="form-textarea"
-              required
-            >"مع بعضنا نبدأ قصة جديدة، وبحبكم يتألق هذا اليوم الجميل"</textarea>
+          <div class="form-field">
+            <label for="welcomeMsg">جملة الترحيب</label>
+            <textarea id="welcomeMsg" name="welcomeMsg" required>"مع بعضنا نبدأ قصة جديدة، وبحبكم تكتمل السعادة."</textarea>
           </div>
 
-          <!-- Row 4 -->
-          <div class="form-group">
-            <label for="families" class="form-label">أهل العروسين</label>
-            <textarea id="families" name="families" class="form-textarea" required>أهل العريس: آل الرشيد
+          <div class="form-field">
+            <label for="families">أهل العروسين</label>
+            <textarea id="families" name="families" required>أهل العريس: آل الرشيد
 أهل العروسة: آل الحسين</textarea>
           </div>
 
-          <!-- Price Info -->
-          <div class="luxury-panel p-5 rounded-xl border-2 border-yellow-600/30 bg-yellow-600/5">
-            <div class="flex justify-between items-center">
-              <span class="text-sm font-cairo">مبلغ العربون الأساسي</span>
-              <span class="text-2xl font-amiri font-bold text-yellow-400">300 جنيه</span>
+          <div class="price-box">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm text-stone-200">العربون</span>
+              <span class="font-amiri text-[2rem] gold-text">300 جنيه</span>
             </div>
           </div>
 
-          <!-- Submit Button -->
-          <button type="submit" class="w-full btn-luxury py-4 text-lg hover:glow-box">
-            <i class="fab fa-whatsapp"></i>
+          <button class="cta-btn mt-6 w-full" type="submit">
+            <i class="fa-brands fa-whatsapp"></i>
             <span>إرسال التفاصيل عبر واتساب</span>
           </button>
 
-          <p class="text-xs text-yellow-600/70 text-center font-cairo mt-4">
-            سيتم إرسال طلبك مباشرة إلى فريقنا عبر واتساب
-          </p>
+          <div class="privacy-note">الموقع مخصص للمعازيم فقط — لا توجد لوحات تحكم أو روابط إدارية داخل الصفحة.</div>
         </form>
       </div>
     </div>
 
-    <!-- Audio Context for Music -->
-    <audio id="backgroundMusic" preload="none">
-      <source src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" type="audio/wav" />
-    </audio>
-
-    <!-- Scripts -->
     <script>
-      // Envelope Animation
       const envelope = document.getElementById('envelope');
-      const envelopeContainer = document.getElementById('envelopeContainer');
-      const openEnvelopeBtn = document.getElementById('openEnvelopeBtn');
+      const envelopeWrap = document.getElementById('envelopeWrap');
+      const openCardBtn = document.getElementById('openCardBtn');
+      const bookingBtn = document.getElementById('bookingBtn');
+      const bookingModal = document.getElementById('bookingModal');
+      const closeModalBtn = document.getElementById('closeModal');
+      const form = document.getElementById('bookingForm');
 
       function toggleEnvelope() {
         envelope.classList.toggle('opened');
       }
 
-      envelopeContainer.addEventListener('click', toggleEnvelope);
-      openEnvelopeBtn.addEventListener('click', () => {
-        toggleEnvelope();
-        setTimeout(() => {
-          document.querySelector('.invitation-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 600);
-      });
-
-      // Modal Controls
-      const bookingModal = document.getElementById('bookingModal');
-      const openFormBtn = document.getElementById('openFormBtn');
-      const closeFormBtn = document.getElementById('closeFormBtn');
-      const bookingForm = document.getElementById('bookingForm');
-
-      openFormBtn.addEventListener('click', () => {
-        bookingModal.classList.add('active');
-      });
-
-      closeFormBtn.addEventListener('click', () => {
-        bookingModal.classList.remove('active');
-      });
-
-      bookingModal.addEventListener('click', (e) => {
-        if (e.target === bookingModal) {
-          bookingModal.classList.remove('active');
+      envelopeWrap.addEventListener('click', toggleEnvelope);
+      envelopeWrap.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleEnvelope();
         }
       });
 
-      // Form Submission
-      bookingForm.addEventListener('submit', (e) => {
+      openCardBtn.addEventListener('click', () => {
+        envelope.classList.add('opened');
+        document.querySelector('.preview-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      function openModal() {
+        bookingModal.classList.add('active');
+      }
+
+      function closeModal() {
+        bookingModal.classList.remove('active');
+      }
+
+      bookingBtn.addEventListener('click', openModal);
+      closeModalBtn.addEventListener('click', closeModal);
+      bookingModal.addEventListener('click', (e) => {
+        if (e.target === bookingModal) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const groomName = document.getElementById('groomName').value || 'العريس';
-        const brideName = document.getElementById('brideName').value || 'العروسة';
-        const weddingDate = document.getElementById('weddingDate').value || 'التاريخ';
+        const groom = document.getElementById('groomName').value || 'العريس';
+        const bride = document.getElementById('brideName').value || 'العروسة';
+        const date = document.getElementById('weddingDate').value || 'التاريخ';
         const venue = document.getElementById('venue').value || 'المكان';
-        const welcomeMessage = document.getElementById('welcomeMessage').value || 'جملة ترحيب';
+        const welcome = document.getElementById('welcomeMsg').value || 'جملة ترحيب';
         const families = document.getElementById('families').value || 'أهل العروسين';
 
-        const message = `*طلب دعوة زفاف من منصة أثر الفاخرة*\n\n📌 *بيانات الحفل:*\n👰 العروسة: ${brideName}\n🤵 العريس: ${groomName}\n📅 التاريخ: ${weddingDate}\n📍 المكان: ${venue}\n\n💬 *جملة الترحيب:*\n${welcomeMessage}\n\n👨‍👩‍👧‍👦 *أهل العروسين:*\n${families}\n\n💳 *مبلغ العربون المطلوب:* 300 جنيه مصري\n\nأرغب في تأكيد حجز الدعوات الرقمية الفاخرة.`;
+        const text = `مرحباً، أود تأكيد طلب دعوة الزفاف:\n\n• العريس: ${groom}\n• العروسة: ${bride}\n• تاريخ الزفاف: ${date}\n• المكان: ${venue}\n• جملة الترحيب: ${welcome}\n• أهل العروسين:\n${families}\n\nالعربون: 300 جنيه مصري\nأرغب في تأكيد الحجز.`;
 
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/201097597133?text=${encodedMessage}`;
-
+        const whatsappUrl = `https://wa.me/201097597133?text=${encodeURIComponent(text)}`;
         window.open(whatsappUrl, '_blank');
-        bookingModal.classList.remove('active');
-      });
-
-      // Keyboard Navigation
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          bookingModal.classList.remove('active');
-        }
-      });
-
-      // Scroll Animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.animation = entry.target.dataset.animation || 'fadeIn 0.8s ease-out';
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach((el) => {
-        observer.observe(el);
-      });
-
-      // Smooth Scroll
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-
-      // Page Load Animation
-      window.addEventListener('load', () => {
-        document.body.style.opacity = '1';
+        closeModal();
       });
     </script>
   </body>
