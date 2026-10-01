@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athar | دعوة زفاف</title>
+    <meta
+      name="description"
+      content="دعوة زفاف فاخرة تحت اسم أثر - Athar، تصميم احترافي داكن ذهبي مع بطاقة دعوة تفاعلية ومعاينة العميل."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                50: '#fff9eb',
+                100: '#fdf0c9',
+                200: '#f6db8f',
+                300: '#f0c96b',
+                400: '#e5b754',
+                500: '#d9a644',
+                600: '#c78c2d',
+                700: '#9c6b1c',
+                800: '#6d4916',
+                900: '#402d11',
+              },
+              ember: '#f5d58b',
+              midnight: '#090b10',
+              paper: '#f4efe7',
+              plum: '#17151d',
+            },
+            boxShadow: {
+              glow: '0 0 28px rgba(214, 166, 74, 0.25)',
+              luxe: '0 20px 60px rgba(0,0,0,0.55)',
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'serif'],
+              arabic: ['"Noto Naskh Arabic"', 'serif'],
+              body: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gold-1: #f6d98c;
+        --gold-2: #dcae4f;
+        --gold-3: #8d6a27;
+        --midnight: #090b10;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top, rgba(214, 166, 74, 0.18), transparent 35%),
+          radial-gradient(circle at bottom, rgba(214, 166, 74, 0.1), transparent 30%),
+          linear-gradient(135deg, #06080d 0%, #0d1117 30%, #131821 100%);
+        color: #f8f3ea;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+      }
+
+      .luxury-panel {
+        background: linear-gradient(160deg, rgba(18, 20, 27, 0.94), rgba(13, 14, 18, 0.92));
+        border: 1px solid rgba(221, 184, 112, 0.3);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      }
+
+      .gold-text {
+        background: linear-gradient(180deg, #fff5db 0%, #f0d490 26%, #d8ab4b 58%, #f0d490 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .gold-border {
+        border: 1px solid rgba(218, 180, 94, 0.45);
+      }
+
+      .sparkle {
+        position: relative;
+      }
+
+      .sparkle::before,
+      .sparkle::after {
+        content: "✦";
+        position: absolute;
+        color: rgba(243, 201, 113, 0.8);
+        font-size: 0.75rem;
+        animation: twinkle 2.8s ease-in-out infinite alternate;
+      }
+
+      .sparkle::before {
+        left: 12%;
+        top: 18%;
+      }
+
+      .sparkle::after {
+        right: 15%;
+        bottom: 20%;
+        animation-delay: 1s;
+      }
+
+      @keyframes twinkle {
+        0% {
+          opacity: 0.25;
+          transform: scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1.15);
+        }
+      }
+
+      .seal {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, #f7df9f, #d7a545 42%, #785418 100%);
+        box-shadow: 0 0 0 6px rgba(216, 173, 83, 0.14), 0 0 30px rgba(245, 213, 139, 0.35);
+        position: relative;
+      }
+
+      .seal::before {
+        content: "A";
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgba(62, 43, 9, 0.8);
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      .envelope-wrap {
+        position: relative;
+        perspective: 1600px;
+        cursor: pointer;
+      }
+
+      .envelope {
+        position: relative;
+        width: min(90vw, 760px);
+        height: 480px;
+        margin: 0 auto;
+        border-radius: 26px;
+        background: linear-gradient(180deg, rgba(29, 26, 24, 0.95), rgba(16, 15, 18, 0.93));
+        border: 1px solid rgba(214, 170, 94, 0.4);
+        box-shadow: 0 32px 60px rgba(0, 0, 0, 0.45);
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform 1s ease;
+      }
+
+      .envelope::before,
+      .envelope::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(218, 184, 111, 0.13), transparent 45%, rgba(218, 184, 111, 0.08));
+      }
+
+      .envelope-top {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        clip-path: polygon(0 0, 100% 0, 50% 58%);
+        background: linear-gradient(180deg, rgba(42, 35, 27, 0.95), rgba(27, 22, 18, 0.98));
+        border-bottom: 1px solid rgba(214, 170, 94, 0.3);
+        transform-origin: top center;
+        transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.3, 1);
+      }
+
+      .envelope-front {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: linear-gradient(180deg, rgba(35, 27, 21, 0.96), rgba(17, 15, 18, 0.97));
+        border-radius: 26px;
+      }
+
+      .envelope-front::before,
+      .envelope-front::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, transparent 49.8%, rgba(214, 170, 94, 0.26) 49.9%, rgba(214, 170, 94, 0.26) 50.1%, transparent 50.2%);
+      }
+
+      .envelope-front::after {
+        background: linear-gradient(-45deg, transparent 49.8%, rgba(214, 170, 94, 0.18) 49.9%, rgba(214, 170, 94, 0.18) 50.1%, transparent 50.2%);
+      }
+
+      .envelope-letter {
+        position: absolute;
+        left: 50%;
+        top: 46%;
+        width: min(84vw, 650px);
+        min-height: 320px;
+        transform: translate(-50%, -50%) translateY(38px) scale(0.9);
+        background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(234, 225, 211, 0.98));
+        border-radius: 22px;
+        border: 1px solid rgba(166, 121, 42, 0.35);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        z-index: 1;
+        transition: all 1.2s cubic-bezier(0.2, 0.7, 0.3, 1);
+      }
+
+      .envelope-wrap.open .envelope-top {
+        transform: rotateX(180deg);
+        z-index: 1;
+      }
+
+      .envelope-wrap.open .envelope-letter {
+        transform: translate(-50%, -50%) translateY(0px) scale(1);
+        z-index: 4;
+      }
+
+      .card-noise {
+        background-image:
+          linear-gradient(rgba(255,255,255,0.16), rgba(255,255,255,0.04)),
+          radial-gradient(rgba(122, 92, 35, 0.18) 0.7px, transparent 0.7px);
+        background-size: auto, 14px 14px;
+      }
+
+      .ring {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(221, 180, 94, 0.8);
+        border-radius: 9999px;
+        display: inline-block;
+        position: relative;
+      }
+
+      .ring::before {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border-radius: 9999px;
+        background: rgba(246, 205, 112, 0.5);
+      }
+
+      .floating-badge {
+        backdrop-filter: blur(10px);
+      }
+
+      .glass {
+        background: rgba(13, 17, 22, 0.62);
+        border: 1px solid rgba(212, 174, 95, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .music-btn {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .music-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 25px rgba(214, 166, 74, 0.25);
+      }
+
+      @media (max-width: 768px) {
+        .envelope {
+          height: 430px;
+        }
+
+        .envelope-letter {
+          width: min(88vw, 580px);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen overflow-x-hidden selection:bg-yellow-500/30 selection:text-white">
+    <div class="absolute inset-0 pointer-events-none opacity-50">
+      <div class="absolute left-8 top-10 h-32 w-32 rounded-full bg-yellow-500/10 blur-3xl"></div>
+      <div class="absolute right-8 top-28 h-44 w-44 rounded-full bg-amber-400/10 blur-3xl"></div>
+      <div class="absolute bottom-10 left-1/3 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl"></div>
+    </div>
+
+    <main class="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+      <header class="mb-8 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full border border-yellow-500/40 bg-black/20 text-xl shadow-glow">
+            <span class="gold-text font-display text-2xl leading-none">A</span>
+          </div>
+          <div>
+            <p class="font-display text-3xl tracking-[0.2em] text-yellow-100">ATHAR</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button
+            id="musicToggle"
+            class="music-btn inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-black/20 px-4 py-2 text-sm text-yellow-100 shadow-glow"
+            type="button"
+            aria-label="تشغيل الموسيقى"
+          >
+            <span>♫</span>
+            <span>الموسيقى</span>
+          </button>
+
+          <a
+            href="https://www.instagram.com/atharluxury4?stkn=OHA0NTNlY3o0cGJw"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="إنستغرام أثر"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-yellow-500/30 bg-black/20 text-yellow-100 transition hover:scale-105 hover:border-yellow-300/60 hover:bg-yellow-500/10"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.9 2.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 1.5A4.5 4.5 0 1 0 12 17.5 4.5 4.5 0 0 0 12 7.5Z"/>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <section class="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/5 px-3 py-2 text-xs tracking-[0.2em] text-yellow-100/90">
+            <span class="ring"></span>
+            دعوة خاصة لاحتفالٍ ملكي
+          </div>
+
+          <div class="space-y-4">
+            <p class="font-display text-4xl leading-none text-stone-200 sm:text-5xl lg:text-6xl">
+              عيدٌ يزهر<br />
+              <span class="gold-text">بوعاءٍ من السعادة</span>
+            </p>
+            <p class="max-w-lg text-base leading-8 text-stone-300/90">
+              نرحب بكم في لحظةٍ مميزة تُحمل في القلب كل الحب والحنين، حيث تتحد القلوب في ليلةٍ لا تُنسى تُقام تحت اسم أثر.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <button
+              id="openEnvelope"
+              type="button"
+              class="rounded-full border border-yellow-400/60 bg-gradient-to-r from-yellow-600/30 via-yellow-400/10 to-amber-500/20 px-6 py-3 text-sm font-medium text-yellow-100 shadow-glow transition hover:scale-[1.02]"
+            >
+              فتح بطاقة الدعوة
+            </button>
+            <button
+              id="openForm"
+              type="button"
+              class="rounded-full border border-stone-600 bg-stone-900/70 px-6 py-3 text-sm font-medium text-stone-100 transition hover:border-yellow-500/50 hover:text-yellow-100"
+            >
+              إرسال الحجز
+            </button>
+          </div>
+
+          <div class="grid max-w-md gap-4 sm:grid-cols-3">
+            <div class="glass rounded-2xl p-4 text-center">
+              <div class="font-display text-3xl gold-text">12</div>
+              <div class="mt-2 text-xs text-stone-300">أكتوبر</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <div class="font-display text-3xl gold-text">2026</div>
+              <div class="mt-2 text-xs text-stone-300">السنة</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <div class="font-display text-3xl gold-text">7:30</div>
+              <div class="mt-2 text-xs text-stone-300">الساعة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="floating-badge absolute -left-2 top-8 z-20 rounded-full border border-yellow-500/30 bg-black/30 px-3 py-2 text-xs text-yellow-100 shadow-glow">
+            سارة &amp; يوسف
+          </div>
+
+          <div class="envelope-wrap" id="envelopeWrap" aria-label="بطاقة دعوة زفاف" role="button" tabindex="0">
+            <div class="envelope">
+              <div class="envelope-front"></div>
+              <div class="envelope-top"></div>
+
+              <div class="envelope-letter card-noise p-6 sm:p-8">
+                <div class="absolute left-4 top-4 h-10 w-10 rounded-full border border-yellow-400/40 bg-white/30"></div>
+                <div class="absolute bottom-4 right-4 h-10 w-10 rounded-full border border-yellow-400/40 bg-white/30"></div>
+
+                <div class="flex h-full flex-col justify-between">
+                  <div class="text-center">
+                    <div class="inline-flex items-center gap-2 text-[10px] tracking-[0.5em] text-stone-500">
+                      <span class="h-px w-8 bg-stone-400"></span>
+                      ATHAR
+                      <span class="h-px w-8 bg-stone-400"></span>
+                    </div>
+                    <h2 class="mt-4 font-display text-4xl text-stone-800 sm:text-5xl">سارة و يوسف</h2>
+                    <p class="mt-4 text-sm tracking-[0.5em] text-stone-500">يدعونكم لحضور ليلة زفافهم</p>
+                  </div>
+
+                  <div class="mx-auto flex items-center justify-center gap-8 py-4">
+                    <div class="h-px w-16 bg-gradient-to-r from-transparent via-yellow-600 to-transparent"></div>
+                    <div class="seal"></div>
+                    <div class="h-px w-16 bg-gradient-to-r from-transparent via-yellow-600 to-transparent"></div>
+                  </div>
+
+                  <div class="grid gap-3 text-center text-stone-700 sm:grid-cols-3">
+                    <div>
+                      <p class="text-[10px] tracking-[0.35em] text-stone-500">التاريخ</p>
+                      <p class="mt-2 font-display text-2xl">12 أكتوبر</p>
+                    </div>
+                    <div>
+                      <p class="text-[10px] tracking-[0.35em] text-stone-500">الساعة</p>
+                      <p class="mt-2 font-display text-2xl">7:30 مساءً</p>
+                    </div>
+                    <div>
+                      <p class="text-[10px] tracking-[0.35em] text-stone-500">المكان</p>
+                      <p class="mt-2 font-display text-2xl">قصر الياسمين</p>
+                    </div>
+                  </div>
+
+                  <div class="text-center text-sm leading-7 text-stone-600">
+                    <p>"مع بعضنا نبدأ قصةً جديدة،</p>
+                    <p>وبحبكم نُضيء هذه الليلة الجميلة."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden items-end justify-center bg-black/70 p-4 backdrop-blur-sm sm:items-center">
+      <div class="w-full max-w-2xl rounded-[30px] border border-yellow-500/20 bg-[#0d1014] p-5 shadow-luxe sm:p-7">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <div>
+            <p class="text-xs tracking-[0.25em] text-yellow-200/80">الحجز &amp; التفاصيل</p>
+            <h3 class="mt-2 font-display text-4xl text-yellow-50">طلب دعوة خاصة</h3>
+          </div>
+          <button
+            id="closeForm"
+            type="button"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-stone-600 bg-stone-900/80 text-xl text-stone-200 transition hover:border-yellow-400/60 hover:text-yellow-100"
+            aria-label="إغلاق النموذج"
+          >
+            ×
+          </button>
+        </div>
+
+        <form id="bookingForm" class="space-y-5">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="block">
+              <span class="mb-2 block text-sm text-stone-300">اسم العريس</span>
+              <input
+                type="text"
+                name="groom"
+                value="يوسف"
+                class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-stone-100 outline-none transition focus:border-yellow-500/60"
+              />
+            </label>
+
+            <label class="block">
+              <span class="mb-2 block text-sm text-stone-300">اسم العروسة</span>
+              <input
+                type="text"
+                name="bride"
+                value="سارة"
+                class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-stone-100 outline-none transition focus:border-yellow-500/60"
+              />
+            </label>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="block">
+              <span class="mb-2 block text-sm text-stone-300">موعد الزفاف</span>
+              <input
+                type="text"
+                name="date"
+                value="12 أكتوبر 2026"
+                class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-stone-100 outline-none transition focus:border-yellow-500/60"
+              />
+            </label>
+
+            <label class="block">
+              <span class="mb-2 block text-sm text-stone-300">المكان</span>
+              <input
+                type="text"
+                name="venue"
+                value="قصر الياسمين – القاهرة"
+                class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-stone-100 outline-none transition focus:border-yellow-500/60"
+              />
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="mb-2 block text-sm text-stone-300">جملة الترحيب</span>
+            <textarea
+              name="welcome"
+              rows="3"
+              class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-stone-100 outline-none transition focus:border-yellow-500/60"
+            >"مع بعضنا نبدأ قصةً جديدة، وبحبكم نضيء هذه الليلة الجميلة."</textarea>
+          </label>
+
+          <label class="block">
+            <span class="mb-2 block text-sm text-stone-300">أهل العروسين</span>
+            <textarea
+              name="families"
+              rows="3"
+              class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-stone-100 outline-none transition focus:border-yellow-500/60"
+            >أهل العريس: آل الرشيد
+أهل العروسة: آل الحسين</textarea>
+          </label>
+
+          <div class="rounded-2xl border border-yellow-500/25 bg-yellow-500/5 p-4 text-sm text-yellow-50">
+            <p class="mb-2 font-medium">مبلغ العربون:</p>
+            <p class="text-lg text-yellow-200">300 جنيه مصري</p>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-2xl border border-yellow-400/60 bg-gradient-to-r from-yellow-600/30 via-yellow-500/10 to-amber-500/10 px-5 py-4 text-base font-medium text-yellow-100 shadow-glow transition hover:scale-[1.01]"
+          >
+            إرسال تفاصيل الحجز والعربون عبر واتساب
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const envelopeWrap = document.getElementById('envelopeWrap');
+      const openEnvelopeBtn = document.getElementById('openEnvelope');
+      const modal = document.getElementById('bookingModal');
+      const openFormBtn = document.getElementById('openForm');
+      const closeFormBtn = document.getElementById('closeForm');
+      const bookingForm = document.getElementById('bookingForm');
+      const musicToggle = document.getElementById('musicToggle');
+
+      function toggleEnvelope(forceOpen) {
+        const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !envelopeWrap.classList.contains('open');
+        envelopeWrap.classList.toggle('open', shouldOpen);
+      }
+
+      envelopeWrap.addEventListener('click', () => toggleEnvelope());
+      envelopeWrap.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleEnvelope();
+        }
+      });
+
+      openEnvelopeBtn.addEventListener('click', () => {
+        toggleEnvelope(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      function openModal() {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      openFormBtn.addEventListener('click', openModal);
+      closeFormBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+      });
+
+      bookingForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(bookingForm);
+        const groom = formData.get('groom') || 'العريس';
+        const bride = formData.get('bride') || 'العروسة';
+        const date = formData.get('date') || 'موعد الزفاف';
+        const venue = formData.get('venue') || 'المكان';
+        const welcome = formData.get('welcome') || 'جملة ترحيب';
+        const families = formData.get('families') || 'أهل العروسين';
+
+        const message = `مرحباً، أود إرسال تفاصيل الحجز للعروسان:\n\n• العريس: ${groom}\n• العروسة: ${bride}\n• موعد الزفاف: ${date}\n• المكان: ${venue}\n• جملة الترحيب: ${welcome}\n• أهل العروسين: ${families}\n\nمبلغ العربون: 300 جنيه مصري\n\nأرغب في تأكيد الحجز.`;
+
+        const encoded = encodeURIComponent(message);
+        window.open(`https://wa.me/201097597133?text=${encoded}`, '_blank');
+        closeModal();
+      });
+
+      let audioCtx = null;
+      let gainNode = null;
+      let melodyTimer = null;
+
+      function createMusic() {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          gainNode = audioCtx.createGain();
+          gainNode.gain.value = 0.05;
+          gainNode.connect(audioCtx.destination);
+        }
+
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const notes = [261.63, 329.63, 392.0, 523.25, 392.0, 329.63, 293.66, 349.23];
+        let step = 0;
+
+        clearInterval(melodyTimer);
+        melodyTimer = setInterval(() => {
+          if (!audioCtx || !gainNode) return;
+
+          const osc = audioCtx.createOscillator();
+          const oscGain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = notes[step % notes.length];
+          oscGain.gain.value = 0.06;
+          osc.connect(oscGain);
+          oscGain.connect(gainNode);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.4);
+          step++;
+        }, 420);
+      }
+
+      function stopMusic() {
+        if (melodyTimer) {
+          clearInterval(melodyTimer);
+          melodyTimer = null;
+        }
+        if (gainNode) {
+          gainNode.gain.value = 0;
+        }
+      }
+
+      let isPlaying = false;
+      musicToggle.addEventListener('click', () => {
+        if (!isPlaying) {
+          createMusic();
+          musicToggle.innerHTML = '<span>♫</span><span>إيقاف</span>';
+          isPlaying = true;
+        } else {
+          stopMusic();
+          musicToggle.innerHTML = '<span>♫</span><span>الموسيقى</span>';
+          isPlaying = false;
+        }
+      });
+    </script>
+  </body>
+</html>
